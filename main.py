@@ -26,24 +26,14 @@ client = AzureOpenAI(
 
 # 요청 형식을 정의하는 Pydantic 모델
 class Query(BaseModel):
-    title: str
     content: str
-    imageurl: str
 
 class Response(BaseModel):
-    title: str
-    imageurl: str
     content: str
-    summary: str
-    recommendation: str
 
 # 질문에 대한 답변을 생성하는 함수
 def generate_answer(content: str) -> str:
-    prompt = f'''너는 민원처리담당AI야
-    JSON키워드는 summary와 recommendation이야
-    summary에는 글이나 이미지에 대한 요약을,
-    recommendation에는 글이나 이미지의 민원에 대한 해결방안을 써 
-    앞에 JSON을 붙이지말고 JSON형식으로 출력해줘
+    prompt = f'''너는 요약AI야 글을 보고 요약을 해줘
     '''
 
     try:
@@ -226,6 +216,7 @@ async def text_api(query: Query1):
 
 class Query_test(BaseModel):
     content: str
+
 class Response_test(BaseModel):
     content: str
 
