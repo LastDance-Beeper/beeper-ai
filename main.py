@@ -247,7 +247,3 @@ async def get_api(query: Query_test):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8083)
-
-
-#[출처] CLOVA Speech로 Speech to text 해보기(with 로컬 환경)|작성자 소소한가
-#OpenAI API
