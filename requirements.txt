@@ -1,0 +1,10 @@
+langchain==0.1.0
+langchain-openai==0.0.2
+beautifulsoup4==4.12.2
+faiss-cpu==1.7.4
+langchainhub==0.1.14
+langserve[all]==0.0.39
+tavily-python==0.1.9
+fastapi==0.109.0
+uvicorn==0.23.2
+urllib3==2.1.0
