@@ -236,7 +236,7 @@ async def get_api():
     }
     return json_string
 
-@app.post("/test_get")
+@app.post("/test_post")
 async def get_api(query: Query_test):
     json_string = {
         'content': str(query.content) + 'test'
